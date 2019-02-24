@@ -8,3 +8,14 @@ export const maxLength = value =>
 
 export const matchesPassword = (value, allValues) =>
   value === allValues.password ? undefined : "Passwords must match";
+
+const takenUserNames = ["john", "mark", "alice"];
+export const asyncValidate = async values => {
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+  await sleep(1000);
+  if (takenUserNames.includes(values.username)) {
+    return Promise.reject({
+      username: "Username is already taken"
+    });
+  }
+};
