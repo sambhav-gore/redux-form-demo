@@ -1,3 +1,12 @@
+A sample app made by following a tutorial about `redux-form`.
+It has a Registration form with:
+
+- Client side field validations
+- Async validations
+- Match with other field (confirm password) validation
+- Field Array (add discount fields)
+- A nice looking and interactive styling
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
