@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
-import { customInput, customSelect } from "./fields";
+import { Field, FieldArray, reduxForm } from "redux-form";
+import { customInput, customSelect, discounts } from "./fields";
 import {
   required,
   minLength,
@@ -62,6 +62,7 @@ class RegisterForm extends Component {
           component={customInput}
           type="checkbox"
         />
+        <FieldArray name="discountCodes" component={discounts} />
         <button type="submit">Submit</button>
       </form>
     );
